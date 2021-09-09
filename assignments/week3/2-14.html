@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Week 3 Assignment - 2.14</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+  <h1>Order Form</h1>
+  <form method="get" action="http://acsg540.com/~ubuntu/acsg-540-2021f-examples/week3/list_data.php">
+
+    <label>
+      Name
+      <input type="text" name="name">
+    </label>
+
+    <fieldset>
+      <legend>Bulbs</legend>
+      <label>
+        <input type="checkbox" name="bulb[]" value="4reg">
+        Four 25-watt light bulbs for $2.39
+      </label>
+      <label>
+        <input type="checkbox" name="bulb[]" value="8reg">
+        Eight 25-watt light bulbs for $4.29
+      </label>
+      <label for="bulb4long">
+        <input type="checkbox" name="bulb[]" value="4long">
+        Four 25-watt long-life light bulbs for $3.95
+      </label>
+      <label>
+        <input type="checkbox" name="bulb[]" value="8long">
+        Eight 25-watt long-life light bulbs for $7.49
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Card Type</legend>
+      <label>
+        <input type="radio" name="cardtype" value="visa">
+        Visa
+      </label>
+      <label>
+        <input type="radio" name="cardtype" value="mastercard">
+        Master Card
+      </label>
+      <label>
+        <input type="radio" name="cardtype" value="discover">
+        Discover
+      </label>
+    </fieldset>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+  </form>
+</body>
+</html>
