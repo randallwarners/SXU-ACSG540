@@ -1,0 +1,72 @@
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  font-family: serif;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+td, th {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+nav {
+  display: block;
+  height: 20px;
+}
+
+nav + * {
+  clear: both;
+}
+
+.result td:nth-of-type(1) {
+  font-family: "Oleo Script", serif;
+}
+
+.win {
+  font-size: 1.3em;
+  font-family: "Open Sans", sans-serif;
+  color: green;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+/* Schools */
+
+.team-ohio {
+  color: #bb0000;
+}
+
+.team-mich {
+  color: #FFCB05;
+}
+
+.team-penn {
+  color: #002D62;
+}
+
+.team-michst {
+  color: #18453B;
+}
+
+.team-wisc {
+  color: #C4012F;
+}
+
+.team-minn {
+  color: #862334;
+}
+
