@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Week 6 Assignment - 4.1</title>
+  <link rel="stylesheet" href="base.css">
+  <script>
+    function getSquareRow (n) {
+      return `<tr><td>${n}</td><td>${n*n}</td></tr>`;
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="left">
+      Exercises:
+      <a href="4-1.html">4.1</a> 
+      <a href="4-3.html">4.3</a> 
+    </div>
+    <div class="right">
+      Randall Warners
+    </div>
+  </nav>
+
+  <h1>Exercise 4.1</h1>
+
+  <table>
+    <tr>
+      <th>Number</th>
+      <th>Number Squared</th>
+    </tr>
+    <script>
+      for (let i = 5; i < 16; i++) {
+        document.write(getSquareRow(i));
+      }
+    </script>
+  </table>
+
+</body>
+</html>

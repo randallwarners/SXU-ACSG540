@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Week 6 Assignment - 4.3</title>
+  <link rel="stylesheet" href="base.css">
+  <script>
+    // how many times to prompt the user for a number by default
+    const PROMPTS = 3; 
+
+    function bodyLoad () {
+      document.getElementById("prompts").textContent = PROMPTS;
+    }
+
+    function main () {
+      var nums = getNumbers();
+      document.getElementById("input").textContent = nums.toString();
+      document.getElementById("output").textContent = max(nums);
+    }
+
+    // return an array of numbers, prompting the user for each
+    // the number of times to prompt is set by PROMPTS
+    function getNumbers () {
+      var nums = [];
+      for (let i = 0; i < PROMPTS; i++) {
+        var num = Number(prompt("Enter a number: "));
+        nums.push(num);
+      }
+      return nums;
+    }
+
+    // return the max of an array of numbers
+    function max(nums, currentMax) {
+      if (nums === undefined || nums.length == 0) return currentMax;
+      n = nums.pop();
+      if (currentMax === undefined) return max(nums, n);
+      return max(nums, Math.max(currentMax, n));
+    }
+  </script>
+</head>
+<body onload="bodyLoad()">
+  <nav>
+    <div class="left">
+      Exercises:
+      <a href="4-1.html">4.1</a> 
+      <a href="4-3.html">4.3</a> 
+    </div>
+    <div class="right">
+      Randall Warners
+    </div>
+  </nav>
+
+  <h1>Exercise 4.3</h1>
+
+  <h2>Instructions</h2>
+
+  <p>
+    Press <em>Go</em>
+    and you will be prompted for <span id="prompts"></span> numbers.
+    The largest of the numbers will be outputted.
+  </p>
+
+  <button onclick="main()">Go</button>
+
+  <h2>Results</h2>
+
+  <p>
+    Input: <span id="input">
+  </p>
+
+  <p>
+    Output: <span id="output">
+  </p>
+
+</body>
+</html>
