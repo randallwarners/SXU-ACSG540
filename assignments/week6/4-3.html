@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="base.css">
   <script>
     // how many times to prompt the user for a number by default
-    const PROMPTS = 3; 
+    const PROMPTS = 3;
 
     function bodyLoad () {
       document.getElementById("prompts").textContent = PROMPTS;
@@ -15,7 +15,7 @@
     function main () {
       var nums = getNumbers();
       document.getElementById("input").textContent = nums.toString();
-      document.getElementById("output").textContent = max(nums);
+      document.getElementById("output").textContent = Math.max(...nums);
     }
 
     // return an array of numbers, prompting the user for each
@@ -27,14 +27,6 @@
         nums.push(num);
       }
       return nums;
-    }
-
-    // return the max of an array of numbers
-    function max(nums, currentMax) {
-      if (nums === undefined || nums.length == 0) return currentMax;
-      n = nums.pop();
-      if (currentMax === undefined) return max(nums, n);
-      return max(nums, Math.max(currentMax, n));
     }
   </script>
 </head>
