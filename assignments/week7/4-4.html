@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Week 7 Assignment - 4.4</title>
+  <link rel="stylesheet" href="base.css">
+  <script>
+    function main() {
+      var n = Number(prompt("Fibonacci value to output:"));
+      document.getElementById("input").textContent = n;
+      var nums = fibonacci(n);
+      document.getElementById("output").textContent = nums.pop();
+      document.getElementById("previous").textContent = nums.join(', ');
+    }
+
+    function fibonacci(n, nums=[]) {
+      if (n === 0) {
+        return nums;
+      }
+
+      var len = nums.length;
+      if (len <= 1) {
+        nums.push(1);
+      } else {
+        nums.push(nums[len - 1] + nums[len - 2]);
+      }
+      return fibonacci(--n, nums);
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="left">
+      Exercises:
+      <a href="4-4.html">4.4</a>
+      <a href="4-6.html">4.6</a>
+    </div>
+    <div class="right">
+      Randall Warners
+    </div>
+  </nav>
+
+  <h1>Exercise 4.4</h1>
+
+  <h2>Instructions</h2>
+
+  <p>
+    Press <em>Go</em>
+    and enter the index a Fibonacci value to be outputted.
+  </p>
+
+  <button onclick="main()">Go</button>
+
+  <h2>Results</h2>
+
+  <p>
+    Input: <span id="input">
+  </p>
+
+  <p>
+    Output: <span id="output">
+  </p>
+
+  <p>
+    Previous Fibonacci Values: <span id="previous">
+  </p>
+
+</body>
+</html>

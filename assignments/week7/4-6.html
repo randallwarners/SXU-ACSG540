@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Week 7 Assignment - 4.6</title>
+  <link rel="stylesheet" href="base.css">
+  <script>
+    function main() {
+      var input = String(prompt("Enter a list of words:"));
+      var words = input.split(' ');
+      var sorted = [...words];
+      // sort alphabetically (case-insensitive)
+      sorted.sort(function(word1, word2) {
+        if (word1.toLowerCase() < word2.toLowerCase()) {
+          return -1;
+        }
+        else if (word1.toLowerCase() > word2.toLowerCase()) {
+          return 1;
+        }
+        return 0;
+      });
+      document.getElementById("input").textContent = input;
+      document.getElementById("output").textContent = sorted.join(' ');
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="left">
+      Exercises:
+      <a href="4-4.html">4.4</a>
+      <a href="4-6.html">4.6</a>
+    </div>
+    <div class="right">
+      Randall Warners
+    </div>
+  </nav>
+
+  <h1>Exercise 4.6</h1>
+
+  <h2>Instructions</h2>
+
+  <p>
+    Press <em>Go</em>
+    and enter a list of words separated with spaces.
+    The list of words will be outputted in alphabetical order.
+  </p>
+
+  <button onclick="main()">Go</button>
+
+  <h2>Results</h2>
+
+  <p>
+    Input: <span id="input">
+  </p>
+
+  <p>
+    Output: <span id="output">
+  </p>
+
+</body>
+</html>
