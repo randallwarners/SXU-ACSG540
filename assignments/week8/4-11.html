@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Week 8 Assignment - 4.11</title>
+  <link rel="stylesheet" href="base.css">
+  <script>
+    const DEFNUMS = [3, 0, -1, -3, 2, -10, 10, -2];
+
+    function main(nums=DEFNUMS) {
+      document.getElementById("input").textContent = nums;
+      var counts = counter(nums);
+      document.getElementById("negative").textContent = counts['negative'];
+      document.getElementById("zero").textContent = counts['zero'];
+      document.getElementById("positive").textContent = counts['positive'];
+    }
+
+    function counter(nums) {
+      var negative = 0;
+      var zero = 0;
+      var positive = 0;
+
+      for (var i = 0; i < nums.length; i++) {
+        if (nums[i] < 0) {
+          negative++
+        }
+        else if (nums[i] > 0) {
+          positive++
+        }
+        else {
+          zero++
+        }
+      }
+
+      return {
+        negative: negative,
+        zero: zero,
+        positive: positive,
+      }
+    }
+  </script>
+</head>
+
+<body onload="main()">
+  <nav>
+    <div class="left">
+      Exercises:
+      <a href="4-10.html">4.10</a>
+      <a href="4-11.html">4.11</a>
+      <a href="4-14.html">4.14</a>
+    </div>
+    <div class="right">
+      Randall Warners
+    </div>
+  </nav>
+
+  <h1>Exercise 4.11</h1>
+
+  <p>
+    Test numbers: <span id="input">
+  </p>
+
+  <ul>
+    <li>
+      Less than zero: <span id="negative">
+    </li>
+    <li>
+      Zero: <span id="zero">
+    </li>
+    <li>
+      Greater than zero: <span id="positive">
+    </li>
+  </ul>
+
+</body>
+</html>
