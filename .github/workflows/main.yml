@@ -30,8 +30,6 @@ jobs:
         run: |
           TMPKEYFILE=$(mktemp)
           printf "%s" "${{ secrets.SSH_PRIVATE_KEY }}" > $TMPKEYFILE
-          ls -la "$GITHUB_WORKSPACE"
-          ls -la "$GITHUB_WORKSPACE/assignments"
           sftp -b - -i "$TMPKEYFILE" -o StrictHostKeyChecking=no -P "${{ secrets.SFTP_PORT }}" "${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}" << EOF
           put -r $GITHUB_WORKSPACE/assignments/* /${{ secrets.SFTP_USERNAME }}/public_html
           EOF
