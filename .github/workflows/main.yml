@@ -28,7 +28,9 @@ jobs:
       # Deploys
       - name: SFTP Deploy
         run: |
-          ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
-          sftp -b - -P "${{ secrets.SFTP_PORT }}" "${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}" << EOF
+          TMPKEYFILE=$(mktemp)
+          printf "%s" "${{ secrets.SSH_PRIVATE_KEY }}" > $TMPKEYFILE
+          sftp -b - -i "$TMPKEYFILE" -P "${{ secrets.SFTP_PORT }}" "${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}" << EOF
           mkdir -p /rwarners/test
           EOF
+          shred --remove $TMPKEYFILE
