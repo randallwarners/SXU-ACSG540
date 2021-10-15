@@ -31,7 +31,6 @@ jobs:
           TMPKEYFILE=$(mktemp)
           printf "%s" "${{ secrets.SSH_PRIVATE_KEY }}" > $TMPKEYFILE
           sftp -b - -i "$TMPKEYFILE" -o StrictHostKeyChecking=no -P "${{ secrets.SFTP_PORT }}" "${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}" << EOF
-          rm /rwarners/public_html/*
           put -r "$GITHUB_WORKSPACE/assignments/*" /rwarners/public_html
           EOF
           shred --remove $TMPKEYFILE
