@@ -27,4 +27,8 @@ jobs:
 
       # Deploys
       - name: SFTP Deploy
-        run: echo "${{ secrets.TEST }}"          
+        run: |
+          ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
+          sftp -b - -P "${{ secrets.SFTP_PORT }}" "${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}" << EOF
+          mkdir -p /rwarners/test
+          EOF
