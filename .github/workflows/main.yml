@@ -27,18 +27,4 @@ jobs:
 
       # Deploys
       - name: SFTP Deploy
-        # You may pin to the exact commit or the version.
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.1
-        with:
-          # username
-          username: ${{ secrets.SFTP_USERNAME }}
-          # your sftp server
-          server: ${{ secrets.SFTP_SERVER }}
-          # your sftp server port, default to 22
-          port: ${{ secrets.SFTP_PORT }}
-          # you can copy private_key from your *.pem file, keep format
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          # will put all file under this path
-          local_path: ./assignments/*
-          # files will copy to under remote_path
-          remote_path: /rwarners/public_html
+        run: echo test          
