@@ -27,4 +27,4 @@ jobs:
 
       # Deploys
       - name: SFTP Deploy
-        run: echo test          
+        run: echo "${{ secrets.TEST }}"          
