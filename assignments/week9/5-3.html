@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Week 9 Assignment - 5.3</title>
+  <link rel="stylesheet" href="base.css">
+  <script src="base.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="left">
+      Exercises:
+      <a href="5-3.html">5.3</a>
+    </div>
+    <div class="right">
+      Randall Warners
+    </div>
+  </nav>
+
+  <h1>Exercise 5.3</h1>
+
+  <form>
+
+    <div id="fruits_container"></div>
+
+    <template id="fruits_template">
+      <label>
+        <input type="checkbox" name="fruits">
+      </label>
+    </template>
+
+    <hr>
+
+    <p>
+      Subtotal: <span id="subtotal"></span>
+    </p>
+
+    <p>
+      Sales Tax: <span id="tax"></span>
+    </p>
+
+    <hr>
+
+    <p>
+      Total: <span id="total"></span>
+    </p>
+
+    <input type="submit" value="Buy" onclick="return false;">
+
+  </form>
+</body>
+</html>
