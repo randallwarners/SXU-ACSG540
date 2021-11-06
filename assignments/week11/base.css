@@ -1,0 +1,52 @@
+body {
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: serif;
+}
+
+nav {
+  display: block;
+  height: 2em;
+}
+
+nav + * {
+  clear: both;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+img {
+  display: block;
+  margin: 20px 0 20px 0;
+}
+
+p {
+  font-size: 14pt;
+}
+
+.phrase:nth-child(1) {
+  font-family: sans-serif;
+  font-style: italic;
+  color: red;
+  font-size: 0.8em;
+}
+
+.phrase:nth-child(2) {
+  font-family: monospace;
+  font-style: oblique -30deg;
+  color: green;
+  font-size: 1.2em;
+}
+
+.phrase:nth-child(3) {
+  font-family: cursive;
+  font-style: oblique 30deg;
+  color: blue;
+  font-size: 1.4em;
+}
