@@ -1,0 +1,46 @@
+body {
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: serif;
+}
+
+nav {
+  display: block;
+  height: 2em;
+}
+
+nav + * {
+  clear: both;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.bulbs label {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table caption {
+  background: lightgrey;
+}
+
+tfoot > tr {
+  border-top: 2px solid black;
+}
+
+td, th {
+  padding: 5px;
+}
+
+fieldset {
+  margin: 10px;
+}
