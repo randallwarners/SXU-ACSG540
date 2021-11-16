@@ -2,6 +2,7 @@
 include 'data.php';
 
 $total = 0.0;
+$taxrate = 0.062;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,9 +42,17 @@ $total = 0.0;
       <?php } ?>
     </tbody>
     <tfoot>
-      <tr>
-        <td>Total</td>
+      <tr class="total">
+        <td>SubTotal</td>
         <td>$<?=$total?></td>
+      </tr>
+      <tr>
+        <td>Sales Tax</td>
+        <td>$<?=round($total * $taxrate, 2)?></td>
+      </tr>
+      <tr class="total">
+        <td>Total</td>
+        <td>$<?=round($total * ($taxrate + 1), 2)?></td>
       </tr>
     </tfoot>
   </table>

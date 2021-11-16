@@ -25,16 +25,16 @@ nav + * {
   display: block;
 }
 
+.total {
+  border-top: 2px solid black;
+}
+
 table {
   border-collapse: collapse;
 }
 
 table caption {
   background: lightgrey;
-}
-
-tfoot > tr {
-  border-top: 2px solid black;
 }
 
 td, th {
