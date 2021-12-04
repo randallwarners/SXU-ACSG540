@@ -1,0 +1,38 @@
+body {
+  background-color: #121212;
+  color: white;
+  font-family: "Open Sans", "Roboto", sans-serif;
+  font-size: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+nav {
+  display: block;
+  height: 2em;
+}
+
+nav + * {
+  clear: both;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.gif {
+  display: block;
+  margin: 1em 0 1em 0;
+}
+
+#search {
+  height: 2em;
+  margin: 1em 0 1em 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}

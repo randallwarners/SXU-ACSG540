@@ -1,0 +1,3 @@
+[submodule "assignments/week14/vendor/giphy-php-client"]
+	path = assignments/week14/vendor/giphy-php-client
+	url = git@github.com:Giphy/giphy-php-client.git
